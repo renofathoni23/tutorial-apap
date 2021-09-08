@@ -2,4 +2,4 @@
 
 ##Authors
 
-* **<Reno Fathoni>** - *<1906399461>* - *<A>*
+* **Reno Fathoni** - *1906399461* - *A*
