@@ -4,6 +4,7 @@ import apap.tutorial.IsPalindrome.model.Palindrome;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -19,10 +20,19 @@ public class PalindromeController {
         return "isPalindromePage.html";
     }
 
-    @GetMapping(value="/is-palindrome/{kalimat}")
+    @GetMapping(value="/is-palindrome")
     public String isPalindromeRequestParam(
             @RequestParam(value="kalimat") String kalimat,
             Model model){
         return getPalindromePage(kalimat,model);
     }
+
+    @GetMapping(value="/is-palindrome/{kalimat}")
+    public String isPalindromeWithPathVariable(
+            @PathVariable(value="kalimat") String kalimat,
+            Model model){
+        return getPalindromePage(kalimat,model);
+    }
 }
+
+
