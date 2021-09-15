@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Kebun Safari</title>
+</head>
+<body>
+    <div th:if = "${kebunSafari != null}" >
+        <h2 th:text="'Kebun Safari dengan ID ' + ${kebunSafari.idKebunSafari} + ' berhasil dihapus'"></h2>
+    </div>
+
+    <div th:unless="${kebunSafari !=null}">
+        <h3 th:text = "${msg}"></h3>
+    </div>
+<a href="/">Kembali</a>
+</body>
+</html>
