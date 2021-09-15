@@ -40,7 +40,7 @@ bukti screenshotmu.
 Jawab: Akan menampilkan Kebun Safari yang berada pada list beserta data-datanya. Karena
 saya menambahkan Kebun Safari dengan ID kebun Safari = 2 nama = Papa Boom, Alamat = Quanta Fasilkom, 
 dan Nomor Telepon = 08123xx sehingga terdapat objek tersebut pada list.
- gambar: 
+gambar:https://drive.google.com/file/d/1gf78ahsrVsOia8EmnV5qSMdwUF8A6WEQ/view?usp=sharing
 ## Tutorial 1
 ### What I have learned today
 ### Github
