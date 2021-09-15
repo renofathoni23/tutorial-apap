@@ -14,8 +14,8 @@ file HTML untuk view yang akan return pada method yang ada dicontroller.
 Pertanyaan 2: Menurut kamu anotasi @Autowired pada class Controller tersebut merupakan implementasi dari konsep apa? Dan jelaskan secara singkat cara kerja @Autowired tersebut dalam konteks service dan controller yang telah kamu buat
 
 Jawab: Implementasi dari konsep Dependency Injection dimana fitur ini memungkinkan Spring untuk menyelesaikan dan menyuntikkan beans ke beans lain.
-Setelah mengaktifkan injeksi anotasi, kita dapat menggunakan autowiring pada properti, setter, dan konstruktor.
-Referensi: https://www.baeldung.com/spring-autowire
+Setelah mengaktifkan injeksi anotasi, kita dapat menggunakan autowiring pada properti, setter, dan konstruktor. Sehingga kita tidak perlu menulis ulang setter method atau menambahkan argumen pada constructor.@Autowired bekerja dengan mencari class yang terdapat @Repository, @Service, @Controller dan kemudian akan dilakukan inisiasi terhadap class-class yang ada.
+Referensi: https://www.baeldung.com/spring-autowire@
 
 Pertanyaan 3: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link
 berikut:
