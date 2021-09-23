@@ -9,7 +9,7 @@
 Pertanyaan 1: Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model
 (@AllArgsConstructor, @NoArgsConstructor, @Setter, @Getter, @Entity, @Table)
 
-Jawab: @AllArgsConstructor berfungsi untuk menghasilkan konstruktor yang membutuhkan argumen pada class. @Setter dan @Getter berfungsi untuk mengenerate fungsi setter dan getter pada suatu class secara otomatis. 
+Jawab: @AllArgsConstructor berfungsi untuk menghasilkan konstruktor yang membutuhkan argumen pada class. @NoArgsConstructor berfungsi untuk generate empty constructor. @Setter dan @Getter berfungsi untuk mengenerate fungsi setter dan getter pada suatu class secara otomatis. 
 @Entity mendifiniskan bahwa kelas berkoleasi dengan tabel yang ada pada database.@Table berfungsi untuk menentukan nama tabel database yang akan digunakan untuk pemetaan.
 
 Pertanyaan 2: Pada class CabangDB, terdapat method findByNoCabang, apakah kegunaan dari method
