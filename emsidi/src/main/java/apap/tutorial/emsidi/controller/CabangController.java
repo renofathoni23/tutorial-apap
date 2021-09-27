@@ -72,8 +72,14 @@ public class CabangController {
             @ModelAttribute CabangModel cabang,
             Model model
     ){
-        cabangService.updateCabang(cabang);
-        model.addAttribute("noCabang", cabang.getNoCabang());
+        for(int i=0;i<cabangService.getCabangList().size();i++){
+            if(cabang.getNamaCabang().equalsIgnoreCase(cabangService.getCabangList().get(i).getNamaCabang())){
+                model.addAttribute("msg", "Nama Cabang sudah ada");
+            }else{
+                cabangService.updateCabang(cabang);
+                model.addAttribute("noCabang", cabang.getNoCabang());
+            }
+        }
         return "update-cabang";
     }
 
