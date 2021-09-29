@@ -3,6 +3,43 @@
 ##Authors
 
 * **Reno Fathoni** - *1906399461* - *A*
+## Tutorial 3
+### Database & Relasi DataBase dalam Project Spring Boot
+
+Pertanyaan 1: Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model
+(@AllArgsConstructor, @NoArgsConstructor, @Setter, @Getter, @Entity, @Table)
+
+Jawab: @AllArgsConstructor berfungsi untuk menghasilkan konstruktor yang membutuhkan argumen pada class. @NoArgsConstructor berfungsi untuk generate empty constructor. @Setter dan @Getter berfungsi untuk mengenerate fungsi setter dan getter pada suatu class secara otomatis. 
+@Entity mendifiniskan bahwa kelas berkoleasi dengan tabel yang ada pada database.@Table berfungsi untuk menentukan nama tabel database yang akan digunakan untuk pemetaan.
+
+Pertanyaan 2: Pada class CabangDB, terdapat method findByNoCabang, apakah kegunaan dari method
+tersebut?
+
+Jawab: Kegunaan dari Method tersebut adalah mencari Objek Cabang sesuai dengan nomor Cabangnya (noCabang)
+
+Pertanyaan 3: Jelaskan perbedaan kegunaan dari anotasi @JoinTable dan @JoinColumn
+
+Jawab: @JoinColumn berfungsi untuk membuat kolom pada database dan kolom itu akan selalu merefer pada kolom lain (menggunakan foreign key).
+@JoinTable digunakan untuk memetekan beberapa asosiasi seperti  bidirectional many-to-one/one-to-many, unidirectional many-to-one, dan one-to-one ke tabel database.
+
+Pertanyaan 4: Pada class PegawaiModel, digunakan anotasi @JoinColumn pada atribut cabang, apa
+kegunaan dari name, referencedColumnName, dan nullable dalam anotasi tersebut? dan apa
+perbedaan nullable dan penggunaan anotasi @NotNull
+
+Jawab: referencedColumnName adalah kolom yang dirujuk dari kolom lain (foreign key), sedangkan
+name adalah nama kolom pada suatu entity. Lalu nullable digunakan untuk mencegah adanya nilai null dalam database. Perbedaan antara
+nullable dan anotasi @NotNull adalah nullable menunjukan status null dari atribut sedangkan @NotNull digunakan agar tidak ada data null yang masuk kedalam database. 
+
+Pertanyaan 5: Jelaskan kegunaan FetchType.LAZY, CascadeType.ALL, dan FetchType.EAGER
+FetchType.EAGER berfungsi untuk mengambil 
+
+Jawab:
+FetchType.LAZY digunakan untuk mengakses kolom atau atribut yang dibutuhkan saja. Biasanya menggunakan method get untuk mendapatkan datanya.
+FetchType.EAGER digunakan untuk mengambil kolom atau atribut yang berelasi ketika parent entity difetch.
+CascadeType.ALL digunakan untuk menyebarkan operasi (PERSIST, REMOVE, REFRESH, MERGE, DETACH) ke entitas terkait.
+
+Referensi: http://www.javabyexamples.com/delombok-allargsconstructor-noargsconstructor-and-requiredargsconstructor/ , https://projectlombok.org/features/GetterSetter, https://zetcode.com/springboot/annotations/, https://www.baeldung.com/jpa-join-column, https://www.baeldung.com/hibernate-notnull-vs-nullable, https://stackoverflow.com/questions/2990799/difference-between-fetchtype-lazy-and-eager-in-java-persistence-api, https://thorben-janssen.com/entity-mappings-introduction-jpa-fetchtypes/   
+
 ## Tutorial 2
 ### What I have learned today
 ### Organizing Domain Logic
