@@ -3,6 +3,24 @@
 ##Authors
 
 * **Reno Fathoni** - *1906399461* - *A*
+
+## Tutorial 4
+### Presentation Layer using Thymeleaf
+Pertanyaan 1: Jelaskan perbedaan th:include dan th:replace!
+
+Jawab:th:replace digunakan untuk memasukan code yang ada difragment ke dalam tag div sehingga nantinya konten yang ada difragment juga akan ditampilkan.
+th:replace digunakan untuk mengganti host tag dengan code atau konten yang ada difragment.
+
+
+Pertanyaan 2: Jelaskan apa fungsi dari th:object!
+
+Jawab: berfungsi untuk menspesifikasikan suatu object yang akan disubmit pada suatu form. Wajib digunakan jika suata data atau objek ingin tersimpan ketika sudah mengisi form.
+
+Pertanyaan 3: Jelaskan perbedaan dari * dan $ pada saat penggunaan th:object! Kapan harus dipakai?
+
+Jawab:*{} atau asterisk digunakan untuk mengevaluasi suatu objek yang sudah dideklarasi pada controller, ${} digunakan untuk mengevaluasi secara utuh suatu objek atau atribut.
+
+Referensi: https://stackoverflow.com/questions/37103958/difference-between-thymeleaf-include-and-replace, https://o7planning.org/12385/thymeleaf-th-object-and-asterisk-syntax,https://o7planning.org/12385/thymeleaf-th-object-and-asterisk-syntax
 ## Tutorial 3
 ### Database & Relasi DataBase dalam Project Spring Boot
 

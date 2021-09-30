@@ -28,7 +28,12 @@ public class MenuModel implements Serializable{
     private String namaMenu;
 
     @Column(name="is_available", nullable = false)
-    private int isAvailable;
+    private Boolean isAvailable;
+
+    @NotNull
+    @Size(max = 50)
+    @Column(nullable = false)
+    private String deskripsiMenu;
 
     // Relasi dengan CabangModel
     @ManyToMany(mappedBy = "listMenu")
