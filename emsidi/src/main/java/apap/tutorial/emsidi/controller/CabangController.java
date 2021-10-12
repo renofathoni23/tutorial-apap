@@ -1,8 +1,10 @@
 package apap.tutorial.emsidi.controller;
 
 import apap.tutorial.emsidi.model.CabangModel;
+import apap.tutorial.emsidi.model.MenuModel;
 import apap.tutorial.emsidi.model.PegawaiModel;
 import apap.tutorial.emsidi.service.CabangService;
+import apap.tutorial.emsidi.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -20,9 +22,18 @@ public class CabangController {
     @Autowired
     private CabangService cabangService;
 
+    @Qualifier("menuServiceImpl")
+    @Autowired
+    private MenuService menuService;
+
+    private int row;
+
     @GetMapping("/cabang/add")
     public String addCabangForm(Model model){
+        List<MenuModel> listMenu = menuService.getListMenu();
         model.addAttribute("cabang", new CabangModel());
+        model.addAttribute("row", row);
+        model.addAttribute("listMenu",listMenu);
         return "form-add-cabang";
     }
 
@@ -53,6 +64,7 @@ public class CabangController {
 
         model.addAttribute("cabang", cabang);
         model.addAttribute("listPegawai", listPegawai);
+        model.addAttribute("listMenu", cabang.getListMenu());
 
         return "view-cabang";
     }
@@ -102,4 +114,23 @@ public class CabangController {
         return "delete-cabang";
 
     }
+
+    @PostMapping("/cabang/tambahrow")
+    public String tambahRow(Model model){
+        row++;
+        if(row < 0){
+            row = 0;
+        }
+        return addCabangForm(model);
+    }
+
+    @PostMapping("/cabang/hapusrow")
+    public String hapusRow(Model model){
+        row--;
+        if(row < 0){
+            row = 0;
+        }
+        return addCabangForm(model);
+    }
+
 }
