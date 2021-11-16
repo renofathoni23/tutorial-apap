@@ -1,5 +1,6 @@
 package apap.tutorial.emsidi.restcontroller;
 import apap.tutorial.emsidi.model.PegawaiModel;
+import apap.tutorial.emsidi.repository.PegawaiDb;
 import apap.tutorial.emsidi.rest.CabangDetail;
 import apap.tutorial.emsidi.service.PegawaiRestService;
 import lombok.Getter;
@@ -12,6 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Mono;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -82,6 +84,22 @@ public class PegawaiRestController {
     @GetMapping(value="/pegawai/umur/{noPegawai}")
     private HashMap<String,Object> pegawaiMap(@PathVariable("noPegawai")Long noPegawai){
         return pegawaiRestService.simpanPegawaiUmur(noPegawai,pegawaiRestService.getUmur(noPegawai).block().getAge());
+    }
+
+    @GetMapping(value="/list-pegawai-jeniskelamin/{jenisKelamin}")
+    private List<PegawaiModel> retriveListPegawaiJenisKelamin(@PathVariable("jenisKelamin")Long jenisKelamin){
+        List<PegawaiModel> pegawaiSemua = pegawaiRestService.retrieveListPegawai();
+        List<PegawaiModel> listPegawairet = new ArrayList<PegawaiModel>();
+
+        for(int i = 0;i<pegawaiSemua.size();i++){
+            if(pegawaiSemua.get(i).getJenisKelamin() == jenisKelamin){
+                listPegawairet.add(pegawaiSemua.get(i));
+            }
+            else{
+
+            }
+        }
+        return listPegawairet;
     }
 
 //    @GetMapping(value = "/cabang/{noCabang}/status")
