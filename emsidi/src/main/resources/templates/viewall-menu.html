@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 
 <head>
   <title> Emsidi</title>
@@ -22,6 +22,11 @@
       <th>Nama</th>
       <th>Deskripsi</th>
       <th>Tersedia</th>
+      <div sec:authorize="hasAuthority('Manajer')">
+        <th>Detail</th>
+        <th>Update</th>
+        <th>Hapus</th>
+      </div>
     </tr>
     </thead>
     <tbody>
@@ -35,6 +40,17 @@
         <p th:if="${menu.isAvailable == true}" th:text="' YA'"></p>
         <p th:if="${menu.isAvailable == false}" th:text="'TIDAK'"></p>
       </td>
+      <div sec:authorize="hasAuthority('Manajer')">
+        <td>
+          <a class="btn btn-primary" href="/">Detail</a>
+        </td>
+        <td>
+          <a class="btn btn-success" href="/">Update</a>
+        </td>
+        <td>
+          <a class="btn btn-danger" href="/">Delete</a>
+        </td>
+      </div>
     </tr>
     </tbody>
   </table>

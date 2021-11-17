@@ -3,6 +3,53 @@
 ##Authors
 
 * **Reno Fathoni** - *1906399461* - *A*
+## Tutorial 6
+### Web Security
+####Pertanyaan 1: Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
+
+Jawab: Otentikasi adalah proses memverifikasi siapa yang akan login. Saat seseorang
+sedang login dengan username dan kata sandi, disitulah proses otentikasi
+
+Contoh code:
+
+    @Autowired
+    public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(encoder());
+    }
+
+Otorisasi adalah proses memverifikasi bahwa seseorang memiliki akses tertentu. Biasanya
+terdapat role-role tentu pada user. proses otoriasasi ini akan mengecek apakah user tersebut
+memiliki akses ke resource-resource tertentu atau tidak.
+
+Contoh code:
+
+   `.antMatchers("/user/viewall").hasAuthority("Admin")`
+
+   `<div sec:authorize="hasAuthority('Admin')`
+
+####Pertanyaan 2: Apa itu BCryptPasswordEncoder? Jelaskan secara singkat cara kerja dan tujuannya
+
+Jawab: BCryptPasswordEncoder adalah encoder kata sandi satu arah. Algoritma penyandian satu arah digunakan untuk mengenkripsi kata sandi.
+Cara kerjanya akan secara otomatis men-generate dan lalu menggunakan random salt untuk menentukan hashingnya, sehingga nanti akan menghasilkan hasing yang berbeda-beda.
+Sehingga nantinya password yang dimasukan user akan tergenerate menjadi kode hash yang dapat dilihat pada database.
+
+####Pertanyaan 3: Apakah penyimpanan password sebaiknya menggunakan encryption atau hashing? Mengapa demikian?
+
+Jawab: Hashing berguna untuk memvalidasi integritas konten dengan mendeteksi semua perubahan dan kemudian mengubah nilai hash sebagai output. Dan, Enkripsi berguna untuk penyandian data dengan tujuan menjaga kerahasiaan dan keamanan data. Ini membutuhkan kunci pribadi untuk mendekripsi data terenkripsi.
+Dengan alasan diatas seharunya lebih baik menggunakan enkripsi karena sangat berguna dalam penyandian data dan tujuannya pun agar menjaga kerahasiaan.
+
+####Pertanyaan 4: Jelaskan secara singkat apa itu UUID beserta penggunaannya!
+
+Jawab: UUID adalah Universally Unique Identifier, yaitu kumpulan dari 32 karakter/string acak. Karena memiliki pola acak, UUID sangat berguna bagi developer dari serangan Hacker.
+UUID biasanya digunakan untuk keamanan data. 
+
+####Pertanyaan 5: Apa kegunaan class UserDetailsServiceImpl.java? Mengapa harus ada class tersebut
+
+Jawab: Class UserDetailsServiceImpl.java adalah class yang mengimplementasi interface UserDetailService. interface tersebut berguna untuk user DAO saat mengambil informasi mengenai
+otentikasi serta otorisasi kepada user.
+
+Sumber: https://www.priawadi.com/2019/09/generate-uuid-secara-otomatis-untuk.html, https://aboutssl.org/hashing-vs-encryption/, https://it-qa.com/how-do-i-decode-bcryptpasswordencoder/,
+https://qastack.id/server/57077/what-is-the-difference-between-authentication-and-authorization
 
 ## Tutorial 5
 ### Web Service
