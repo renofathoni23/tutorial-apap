@@ -4,6 +4,37 @@
 
 * **Reno Fathoni** - *1906399461* - *A*
 
+## Tutorial 5
+### Web Service
+Pertanyaan 1: Apa itu Postman ? Apa kegunaannya ?
+
+Jawab: Postman adalah aplikasi yang berfungsi sebagai REST CLIENT untuk menguji coba 
+REST API. Kegunaan dari Postman adalah sebagai tools oleh developer untuk menguji API
+yang telah mereka buat. Postman juga menyediakan fitur lain yaitu Sharing Collection
+API for Documentation, Testing API, Realtime Collaboration Team, Monitoring API, Integration.
+
+Pertanyaan 2: Jelaskan fungsi dari anotasi @JsonIgnoreProperties dan @JsonProperty.
+
+Jawab: @JsonIgnoreProperties digunakan untuk mengabaikan properti logis yang ditentukan dalam
+serialisasi dan deserialisasi JSON. Dijelaskan di tingkat kelas. Hal ini dapat memudahkan
+dalam pemanggilan REST dan menghasilkan objek domain. @JsonProperty adalah anotasi penanda
+untuk mendefinisikan properti logis. @JsonProperty dapat dijelaskan di setter non-statis
+atau metode pengambil atau bidang objek non-statis. Properti logis digunakan dalam serialisasi
+dan deserialisasi JSON
+
+Pertanyaan 3: Apa kegunaan atribut WebClient?
+
+Jawab: Webclient digunakan untuk restserviceimpl yang digunakan untuk mengirim dan menerima
+data dari sumber uri.
+
+Pertanyaan 4: Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?
+
+Jawab: ResponseEntity mewakili response HTTP, termasuk header, isi, dan juga status.
+ResponseEntity memungkinkan kita untuk menambahkan header dan kode status. Lalu BindingResult
+menyimpan hasil validasi, pengikatan, dan berisi kesalahan yang mungki terjadi. BindingResult
+harus ada tepat setelah objek model divalidasi atau Spring gagal memvalidasi objek dan melempar
+pengecualian.
+
 ## Tutorial 4
 ### Presentation Layer using Thymeleaf
 Pertanyaan 1: Jelaskan perbedaan th:include dan th:replace!
