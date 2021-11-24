@@ -50,6 +50,7 @@ public class CabangController {
     @GetMapping("/cabang/viewall")
     public String listCabang(Model model){
         List<CabangModel> listCabang = cabangService.getCabangList();
+        System.out.println(listCabang);
         model.addAttribute("listCabang", listCabang);
         return "viewall-cabang";
     }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title> Delete Cabang </title>
+    <object th:include="fragment/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragment/fragment :: js" th:remove="tag"></object>
+</head>
+<body>
+<nav th:replace="fragment/fragment :: navbar('')"></nav>
+<div class="container">
+    <div class="card m-4 p-4">
+        <div class="card-body">
+            <div class="justify-content-center">
+                <h2> Email Sudah terpakai, silahkan menggunakan email lain</h2>
+                <a class="btn btn-primary" href="/user/viewall">Kembali ke List User</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -15,4 +15,5 @@ public interface UserService {
     UserModel findByUsername(String username);
     boolean passwordEqual(String userPassword, String formPassword);
     void setPassword(UserModel user, String newPassword);
+    boolean checkEmail(String email);
 }

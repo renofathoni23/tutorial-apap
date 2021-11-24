@@ -55,5 +55,17 @@ public class UserServiceImpl implements UserService{
         user.setPassword(newPassword);
     }
 
+    @Override
+    public boolean checkEmail(String email){
+        boolean check;
+        UserModel user = userDb.findByEmail(email);
+        if(user == null){
+            check = true;
+        }
+        else{
+            check = false;
+        }
 
+        return check;
+    }
 }
