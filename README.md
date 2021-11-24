@@ -51,8 +51,10 @@ lebih simple.
 #### Pertanyaan 5: Dalam react, apakah perbedaan component dan element?
 
 Jawab: Elemen adalah objek biasa yang ingin ditampilkan pada layar dalam bentuk DOM atau komponen lain. Lalu Component adalah suatu class atau fungsi Javascript
-yang menerima input berupa props atau properties dan akan mengembalikan React Element yang akan ditampilkan pada layar, biasanya adalah HTML. 
+yang menerima input berupa props atau properties dan akan mengembalikan React Element yang akan ditampilkan pada layar, biasanya adalah HTML.
 
+referensi:
+https://blog.logrocket.com/react-functional-components-3-advantages-and-why-you-should-use-them-a570c83adb5e/, https://ozmoroz.com/2018/08/react-functional-vs-class-components/, https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb#:~:text=Components%20are%20the%20building%20blocks,(User%20Interface)%20should%20appear.
 
 ## Tutorial 6
 ### Web Security
