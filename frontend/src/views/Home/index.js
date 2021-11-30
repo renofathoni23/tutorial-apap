@@ -27,7 +27,8 @@ export default class Home extends React.Component{
                             <Badge color="secondary" badgeContent={this.state.cartItems.length}>
                                 <ShoppingCartIcon />
                             </Badge>
-                            :<ViewStreamIcon/>}
+                            :<ViewStreamIcon/>
+                            }
                     </Fab>
                 </div>
                 <p className="text-center text-secondary text-sm font-italic">
@@ -41,7 +42,8 @@ export default class Home extends React.Component{
                                 <List
                                     title="My Cart"
                                     items={this.state.cartItems}
-                                    onItemClick={this.handleDeleteItemfromCart}
+                                    onItemClick={this.handleDeleteAll}
+                                    // onItemClick={this.handleDeleteAll}
                                 ></List>
                             </div>
                         ) :
@@ -99,6 +101,15 @@ export default class Home extends React.Component{
                 //console.log(this.state.cartItems)
                 
              }
+        }
+    }
+
+    handleDeleteAll = (item)=>{
+        for(let i = 0;i<this.state.cartItems.length;i++){
+            this.state.balance+=this.state.cartItems[i].price
+            this.state.cartItems[i].inCart = false
+            this.updateShopItem(this.state.cartItems[i], false)
+            this.state.cartItems.splice(0,this.state.cartItems.length)
         }
     }
 
