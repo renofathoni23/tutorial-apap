@@ -3,6 +3,59 @@
 ##Authors
 
 * **Reno Fathoni** - *1906399461* - *A*
+## Tutorial 7
+### ReactJS 1
+
+#### Pertanyaan 1: Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
+soal 1
+
+Saya mengaktifkan tombol delete button yang sudah disediakan sebelumnya sehingga barang yang didelete pada cart akan hilang dan tombol cart pada shop list akan
+aktif kembali. Pada nomor ini saya membuat function untuk menghandle delete yang saya namanakan 'handleDeleteItemfromCart'. Lalu dalam function tersebut terdapat 
+for loop yang jika cartItems[i].id sama dengan item.id, maka akan cartItems[i].id akan di set inCart nya menjadi False dan akan menggunakan function 
+updateShopItem(this.state.cartItems[i], false), lalu mengeluarkan item tersebut dari cartItems dengan method splice(i,1)
+
+Link code: https://ibb.co/85gYG03
+
+soal 2
+Pada soal ini, saya mengimplementasi agar ketika user klik suatu barang untuk dimasukan ke cart, balance akan berkurang sesuai dengan harga barangnya. Begitupun
+pada Cart,ketika user mendelete suatu barang, maka balancenya akan bertambah. disini saya menambahkan kode pada function handleDeleteItemfromCart dan
+handleAddItemtoCart. Saya menambahkan kode `this.state.balance += this.state. cartItems[i].price` didalam forloop pada handleDeleteItemfromCart dimana kode
+tersebut akan menambah balance sesuai dengan harga item yang didelete. Lalu didalam `if(targetInd<0)` saya menambahkan kode `this.state.balance -= newItem.price`
+sehingga balance akan berkurang ketika user menambahkan item kedalam cart.
+
+Link code: https://ibb.co/3BnT1DH
+
+soal3
+Pada soal ini, saya menambahkan alert jika user mencoba membeli barang yang harganya lebih tinggi dari pada balance yang dimiliki. Pada kasus ini, saya menambahkan
+hanya menambkan conditional if else, dimana if adalah ketika balance - harga item lebih besar atau sama dengan 0, maka item tersebut akan berhasil dimasukan ke cart.
+Lalu elsenya berarti balance < harga item sehingga saya menambahkan kode  `alert("Balance not sufficient")`. 
+
+Link Code: https://ibb.co/Ht6MVqr
+
+#### Pertanyaan 2: Menurut pemahaman kamu selama pengerjaan tutorial ini, apa perbedaan antara state dan props?
+
+Jawab: state adalah variabel yang didefinisikan didalam sebuah class, sedangkan props adalah variabel yang berasal dari luar class.
+
+#### Pertanyaan 3: Menurut kamu, apakah sebaiknya kita menggunakan component (e.g. List, Item) dalam React? sebutkan alasannya.
+
+Jawab: Menurut saya dengan menggunakan component, kita dapat membuat aplikasi atau web dengan membaginya kedalam komponen-komponen kecil sehingga
+ini akan mempermudah dalam mengembangkan kode karena akan lebih mudah untuk dibaca, jika ada perubahan pun maka kita cukup merubah pada komponen yang 
+ingin dirubah sehingga tidak perlu merubah pada semua kode yang ada. Mudah untuk dipahami karena dibentuk ke dalam komponen-komponen. 
+
+#### Pertanyaan 4: Apa perbedaan class component dan functional component?
+
+Jawab: Functional component sebenarnya adalah function Javascript dengam satu parameter atau objek props yang akan mengembalikan komponen React. Sedangkan Class
+component sebenarnya function yang mengimplementasikan OOP. Functional component digunakan untuk meminimalisir this.state yang berlebih sehingga kodenya akan
+lebih simple.
+
+#### Pertanyaan 5: Dalam react, apakah perbedaan component dan element?
+
+Jawab: Elemen adalah objek biasa yang ingin ditampilkan pada layar dalam bentuk DOM atau komponen lain. Lalu Component adalah suatu class atau fungsi Javascript
+yang menerima input berupa props atau properties dan akan mengembalikan React Element yang akan ditampilkan pada layar, biasanya adalah HTML.
+
+referensi:
+https://blog.logrocket.com/react-functional-components-3-advantages-and-why-you-should-use-them-a570c83adb5e/, https://ozmoroz.com/2018/08/react-functional-vs-class-components/, https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb#:~:text=Components%20are%20the%20building%20blocks,(User%20Interface)%20should%20appear.
+
 ## Tutorial 6
 ### Web Security
 ####Pertanyaan 1: Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
