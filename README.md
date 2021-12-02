@@ -7,7 +7,7 @@
 ### ReactJS 2
 
 #### Pertanyaan 1: Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa kalian melakukan langkah - langkah tersebut?
-Jawab: Setelah this.loadData(), saya mengeset value form kembali menjadi kosong dengan menggunakan `this.setState({title:" ", price:0, description:" ", category:" ", quantity:0})`
+Jawab: Setelah method post untuk memasukan data ke database, saya mengeset value form kembali menjadi kosong dengan menggunakan `this.setState({title:" ", price:0, description:" ", category:" ", quantity:0})`
 sehingga ketika membuka modalnya kembali, maka fieldnya akan menjadi kosong lagi.
 #### Pertanyaan 2: Jelaskan fungsi dari async dan await!
 Jawab: Fungsi async memungkinkan kode untuk terus berjalan saat satu fungsi masih menunggu nilai returnnya, atau saat menggunakan asinkron JavaScript dan await untuk memastikan baris tertentu tidak berjalan hingga fungsi mengembalikan nilai.
