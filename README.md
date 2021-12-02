@@ -3,6 +3,22 @@
 ##Authors
 
 * **Reno Fathoni** - *1906399461* - *A*
+## Tutorial 8
+### ReactJS 2
+
+#### Pertanyaan 1: Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa kalian melakukan langkah - langkah tersebut?
+Jawab: Setelah this.loadData(), saya mengeset value form kembali menjadi kosong dengan menggunakan `this.setState({title:" ", price:0, description:" ", category:" ", quantity:0})`
+sehingga ketika membuka modalnya kembali, maka fieldnya akan menjadi kosong lagi.
+#### Pertanyaan 2: Jelaskan fungsi dari async dan await!
+Jawab: Fungsi async memungkinkan kode untuk terus berjalan saat satu fungsi masih menunggu nilai returnnya, atau saat menggunakan asinkron JavaScript dan await untuk memastikan baris tertentu tidak berjalan hingga fungsi mengembalikan nilai.
+#### Pertanyaan 3: Masukkan jawaban dari Screenshot yang diperintahkan di halaman 9 pada Component Lifecycle pada pertanyaan ini
+Jawab: Screenshot dapat dilihat pada link berikut https://drive.google.com/drive/folders/1oFONxQXg_OsEIP0V6ATMpDNfZvjZ3j7E?usp=sharing
+#### Pertanyaan 4: Jelaskan fungsi dari componentDidMount, shouldComponentUpdate,componentDidUpdate, componentWillReceiveProps, componentWillUnmount.Notes : Penjelasan harus mencantumkan “kapan fungsi dipanggil” dan “use case apa saja yang biasanya menggunakan lifecycle method tersebut”.
+Jawab: componentDidMount berfungsi ketika komponen selesai dibuat, usecase yang biasanya menggunakannya adalah ketika ingin mengetauhi suatu komponen selesai dibuat.
+shouldComponentUpdate berfungsi ketika property atau state sudah berubah, usecase yang biasa menggunakannya adalah ketika ingin mengetauhi perubahan dari props atau state dari komponen.
+componentDidUpdate berfungsi ketika sebelum ataupun sesudah komponen dirender kembali, usecase yang biasa menggunakannya adalah ketika ada pekerjaan manual dari luar react yang update si component.
+componentWillReceiveProps berfungsi ketika dipanggil sebelum komponen menerima props yang nilainya berubah, usecase yang biasa menggunakananya adalah ketika mengubah component.
+componentWillUnmount berfungsi ketika ingin menghapus komponen, usecase yang biasa menggunakannya adalah ketika ingin unsubscribe
 ## Tutorial 7
 ### ReactJS 1
 
